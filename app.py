@@ -8,7 +8,7 @@ dias = st.number_input("Días de impresión", min_value=0, step=1)
 horas = st.number_input("Horas de impresion", min_value=0, step=1)
 minutos = st.number_input("Minutos de impresión", min_value=0, step=1)
 peso = st.number_input("Peso de la pieza en gramos (g)", min_value=0.0, step=0.1)
-extras = st.number_input("Costos extras ($)", min_value=0.0, step=100.0)
+extras = st.number_input("Costos extras en pesos($)", min_value=0.0, step=100.0)
 
 # Parámetros base (ajusta según tu Excel real)
 costo_filamento_por_g = 85      # $ por gramo
