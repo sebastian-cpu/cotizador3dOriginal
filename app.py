@@ -1,11 +1,11 @@
 import streamlit as st
 
-st.title("🖨️ Calculadora de Costos - Impresión 3D")
+st.title("🖨️ Calculadora - Impresión 3D")
 
 # Entradas
 pieza = st.text_input("Nombre de la pieza")
 dias = st.number_input("Días de impresión", min_value=0, step=1)
-horas = st.number_input("Horas", min_value=0, step=1)
+horas = st.number_input("Horas de impresion", min_value=0, step=1)
 minutos = st.number_input("Minutos", min_value=0, step=1)
 peso = st.number_input("Peso de la pieza (g)", min_value=0.0, step=0.1)
 extras = st.number_input("Costos extras ($)", min_value=0.0, step=100.0)
