@@ -6,14 +6,14 @@ st.title("🖨️ Calculadora - Impresión 3D")
 pieza = st.text_input("Nombre de la pieza")
 dias = st.number_input("Días de impresión", min_value=0, step=1)
 horas = st.number_input("Horas de impresion", min_value=0, step=1)
-minutos = st.number_input("Minutos", min_value=0, step=1)
-peso = st.number_input("Peso de la pieza (g)", min_value=0.0, step=0.1)
+minutos = st.number_input("Minutos de impresión", min_value=0, step=1)
+peso = st.number_input("Peso de la pieza en gramos (g)", min_value=0.0, step=0.1)
 extras = st.number_input("Costos extras ($)", min_value=0.0, step=100.0)
 
 # Parámetros base (ajusta según tu Excel real)
 costo_filamento_por_g = 85      # $ por gramo
 costo_energia_por_hora = 300    # $ por hora
-ganancia = 0.99                 # 30% de margen
+ganancia = 1                 # 100% de margen
 
 # Cálculos
 tiempo_total_horas = dias*24 + horas + minutos/60
