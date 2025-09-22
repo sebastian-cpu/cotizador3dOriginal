@@ -11,10 +11,19 @@ st.markdown("""
   height:150px;                    /* Alto del banner */
   border-radius:12px;
   margin-bottom:20px;              /* Espacio debajo */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;                     /* Texto blanco */
+  font-size:36px;                  /* Tamaño del texto */
+  font-weight:bold;                /* Texto en negrita */
+  font-family:Arial, sans-serif;
+  letter-spacing:2px;
 }
 </style>
-<div class="banner"></div>
+<div class="banner">WINTRONIC 3D</div>
 """, unsafe_allow_html=True)
+
 
 # Título principal
 st.title("🖨️ Calculadora de cotizaciones - Impresión 3D")
