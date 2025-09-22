@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.title("🖨️ Calculadora - Impresión 3D")
+st.title("🖨️ Calculadora cotizaciones - Impresión 3D")
 
 # Entradas
-pieza = st.text_input("Nombre de la pieza")
+pieza = st.text_input("Nombre de la pieza en 3D")
 dias = st.number_input("Días de impresión", min_value=0, step=1)
 horas = st.number_input("Horas de impresion", min_value=0, step=1)
 minutos = st.number_input("Minutos de impresión", min_value=0, step=1)
