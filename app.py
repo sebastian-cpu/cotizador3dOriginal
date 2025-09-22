@@ -6,6 +6,7 @@ st.set_page_config(page_title="Cotizador 3D", page_icon="🖨️", layout="cente
 #css para banner
 st.markdown("""
 <style>
+
 /* Personalización de los inputs de texto y número */
 input[type="text"], input[type="number"] {
   border: 2px solid #3b5998;        /* Azul medio */
