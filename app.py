@@ -1,27 +1,36 @@
 import streamlit as st
-import streamlit as st
 
-# Opcional: config de página
+# Configuración de la página
 st.set_page_config(page_title="Cotizador 3D", page_icon="🖨️", layout="centered")
 
-# Banner
-st.image("banner1.png", use_column_width=True)
-st.markdown("<br><hr><br>", unsafe_allow_html=True)  # espacio y línea separadora
+# CSS para el banner
+st.markdown("""
+<style>
+.banner{
+  background:#0b4ea2;              /* Azul Win-Tronic */
+  height:150px;                    /* Alto del banner */
+  border-radius:12px;
+  margin-bottom:20px;              /* Espacio debajo */
+}
+</style>
+<div class="banner"></div>
+""", unsafe_allow_html=True)
 
-st.title("🖨️ Calculadora cotizaciones - Impresión 3D")
+# Título principal
+st.title("🖨️ Calculadora de cotizaciones - Impresión 3D")
 
 # Entradas
 pieza = st.text_input("Nombre de la pieza en 3D")
 dias = st.number_input("Días de impresión", min_value=0, step=1)
-horas = st.number_input("Horas de impresion", min_value=0, step=1)
+horas = st.number_input("Horas de impresión", min_value=0, step=1)
 minutos = st.number_input("Minutos de impresión", min_value=0, step=1)
 peso = st.number_input("Peso de la pieza en gramos (g)", min_value=0.0, step=0.1)
 extras = st.number_input("Costos extras en pesos($)", min_value=0.0, step=100.0)
 
 # Parámetros base (ajusta según tu Excel real)
 costo_filamento_por_g = 85000      # $ por gramo
-costo_energia_por_hora = 300    # $ por hora
-ganancia = 1                 # 100% de margen
+costo_energia_por_hora = 300       # $ por hora
+ganancia = 1                       # 100% de margen
 
 # Cálculos
 tiempo_total_horas = dias*24 + horas + minutos/60
