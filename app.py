@@ -66,7 +66,7 @@ peso = st.number_input("Peso de la pieza en gramos (g)", min_value=0.0, step=0.1
 extras = st.number_input("Costos extras en pesos ($)", min_value=0.0, step=100.0)
 
 # Parámetros base
-costo_filamento_por_g = 85000
+costo_filamento_por_g = 85
 costo_energia_por_hora = 300
 ganancia = 1  
 
