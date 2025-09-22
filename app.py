@@ -3,30 +3,37 @@ import streamlit as st
 # Configuración de la página
 st.set_page_config(page_title="Cotizador 3D", page_icon="🖨️", layout="centered")
 
-# CSS para el banner
+#css para banner
 st.markdown("""
 <style>
-.banner{
-  background:#0b4ea2;              /* Azul Win-Tronic */
-  height:150px;                    /* Alto del banner */
-  border-radius:12px;
-  margin-bottom:20px;              /* Espacio debajo */
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;                     /* Texto blanco */
-  font-size:36px;                  /* Tamaño del texto */
-  font-weight:bold;                /* Texto en negrita */
-  font-family:Arial, sans-serif;
-  letter-spacing:2px;
+/* Personalización de los inputs de texto y número */
+input[type="text"], input[type="number"] {
+  border: 2px solid #3b5998;        /* Azul medio */
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #0b2e59;                   /* Azul oscuro para texto */
+  background-color: #f9f9ff;        /* Fondo claro */
+}
+
+/* Cuando el usuario pasa el mouse */
+input[type="text"]:hover, input[type="number"]:hover {
+  border: 2px solid #5a7fc1;        /* Azul más claro */
+}
+
+/* Cuando el input está activo (focus) */
+input[type="text"]:focus, input[type="number"]:focus {
+  border: 2px solid #0b4ea2;        /* Azul corporativo Win-Tronic */
+  box-shadow: 0 0 6px #5a7fc1;      /* Brillo azul alrededor */
+  outline: none;
 }
 </style>
-<div class="banner">WINTRONIC 3D</div>
 """, unsafe_allow_html=True)
 
 
+
 # Título principal
-st.title("🖨️ Calculadora de cotizaciones - Impresión 3D")
+st.title("🖨️🖩 Cotizaciones - Impresión 3D")
 
 # Entradas
 pieza = st.text_input("Nombre de la pieza en 3D")
