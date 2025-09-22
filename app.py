@@ -1,4 +1,12 @@
 import streamlit as st
+import streamlit as st
+
+# Opcional: config de página
+st.set_page_config(page_title="Cotizador 3D", page_icon="🖨️", layout="centered")
+
+# Banner
+st.image("banner1.png", use_column_width=True)
+st.markdown("<br><hr><br>", unsafe_allow_html=True)  # espacio y línea separadora
 
 st.title("🖨️ Calculadora cotizaciones - Impresión 3D")
 
